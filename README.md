@@ -13,7 +13,9 @@ Commands:
 - `terraform plan -destroy -out main.destroy.tfplan`
 - `terraform apply main.destroy.tfplan`
 
-## Complex variables
+## Basics
+
+### Complex variables
 
 ```bash
 cd C:\source\LearningVarious\terraform-learning-personal\Basics\Complex-variables
@@ -33,7 +35,7 @@ terraform plan --var-file=env-min.tfvars --destroy -out main-min.tfplan
 terraform apply --var-file=env-min.tfvars --out main-min.tfplan
 ```
 
-## Distict-Elements-Creation
+### Distict-Elements-Creation
 
 ```cmd
 cd C:\source\LearningVarious\terraform-learning-personal\Basics\Distict-Elements-Creation
@@ -58,4 +60,16 @@ echo "change one version => replace older version with some new version"
 terraform apply -var 'setup_cb_version=V1.1' -var 'codebeamer_cb_version=V1.2'
 
 
+```
+
+## External-File-Integration
+
+### Locals-based-on-files
+
+```cmd
+cd C:\source\LearningVarious\terraform-learning-personal\External-File-Integration\Locals-based-on-files
+
+echo "without version"
+terraform apply -auto-approve
+terraform output
 ```
