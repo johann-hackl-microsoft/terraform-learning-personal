@@ -59,7 +59,15 @@ terraform apply -var 'setup_cb_version=V1.1' -var 'codebeamer_cb_version=V1.0'
 echo "change one version => replace older version with some new version"
 terraform apply -var 'setup_cb_version=V1.1' -var 'codebeamer_cb_version=V1.2'
 
+### Variable-validation
 
+```cmd
+cd C:\source\LearningVarious\terraform-learning-personal\Basics\Variable-Validation
+terraform init
+terraform fmt --recursive
+terraform validate
+
+terraform apply -var 'env=dev' -var 'location=gwc'
 ```
 
 ## External-File-Integration
