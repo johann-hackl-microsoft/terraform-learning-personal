@@ -67,7 +67,7 @@ terraform init
 terraform fmt --recursive
 terraform validate
 
-terraform apply -var 'env=dev' -var 'location=gwc'
+terraform apply -var 'env=dev' -var 'location=gwc' -var 'instance_name=setup'
 ```
 
 ## External-File-Integration
