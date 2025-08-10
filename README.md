@@ -81,3 +81,16 @@ echo "without version"
 terraform apply -auto-approve
 terraform output
 ```
+
+## Azure
+
+### Shared-Tag-Responsibilities
+
+```cmd
+cd C:\source\LearningVarious\terraform-learning-personal\Azure\Shared-Tag-Resposibilities
+
+terraform fmt
+terraform init
+terraform apply -auto-approve
+terraform output
+```
