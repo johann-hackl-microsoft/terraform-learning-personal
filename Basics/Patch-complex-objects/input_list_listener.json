@@ -1,0 +1,64 @@
+[
+    {
+        "name": "private-listener-0-443",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/httpListeners/private-listener-0-443",
+        "etag": "W/\"00000000-0000-0000-0000-000000000000\"",
+        "properties": {
+            "provisioningState": "Succeeded",
+            "frontendIPConfiguration": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/frontendIPConfigurations/private-frontend-ip"
+            },
+            "frontendPort": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/frontendPorts/frontend-port-443"
+            },
+            "protocol": "Https",
+            "sslCertificate": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/sslCertificates/tls-certificate-zatest"
+            },
+            "hostNames": [
+                "private-listener-0-443.cloud.somewhere.com"
+            ],
+            "requireServerNameIndication": false,
+            "enableHttp3": false,
+            "customErrorConfigurations": [],
+            "requestRoutingRules": [
+                {
+                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/requestRoutingRules/private-request-routing-rule-0"
+                }
+            ],
+            "redirectConfiguration": [
+                {
+                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/redirectConfigurations/private-http-redirect-configuration-0-80"
+                }
+            ]
+        },
+        "type": "Microsoft.Network/applicationGateways/httpListeners"
+    },
+    {
+        "name": "private-http-redirect-listener-0-80",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/httpListeners/private-http-redirect-listener-0-80",
+        "etag": "W/\"00000000-0000-0000-0000-000000000000\"",
+        "properties": {
+            "provisioningState": "Succeeded",
+            "frontendIPConfiguration": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/frontendIPConfigurations/private-frontend-ip"
+            },
+            "frontendPort": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/frontendPorts/http-redirect-frontend-port-80"
+            },
+            "protocol": "Http",
+            "hostNames": [
+                "private-listener-0-443.cloud.somewhere.com"
+            ],
+            "requireServerNameIndication": false,
+            "enableHttp3": false,
+            "customErrorConfigurations": [],
+            "requestRoutingRules": [
+                {
+                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/some-example-rg/providers/Microsoft.Network/applicationGateways/some-example-appgw/requestRoutingRules/private-http-redirect-routing-rule-0"
+                }
+            ]
+        },
+        "type": "Microsoft.Network/applicationGateways/httpListeners"
+    }
+]
