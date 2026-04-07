@@ -5,9 +5,10 @@ data "azapi_resource_list" "existing_identity" {
   type      = "Microsoft.ManagedIdentity/userAssignedIdentities@2024-11-30"
 
   response_export_values = {
-    filtered = "value[?name=='${var.uai_name}' && contains(id, '/resourceGroups/${var.rg_name}/')]"
+    filtered = "value[?name=='${var.uai_name}']"
   }
 }
+
 locals {
   existing_identity_tags = length(data.azapi_resource_list.existing_identity.output.filtered) > 0 ? data.azapi_resource_list.existing_identity.output.filtered[0].tags : {}
 }
